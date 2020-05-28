@@ -1,0 +1,14 @@
+﻿<Window x:Class="QuizGoApp.View.BasicInstructionsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizGoApp.View"
+        mc:Ignorable="d"
+        Title="Quiz Wizard" Height="300" Width="600" Icon="/Images/windowicon.jpg" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" Style="{StaticResource WindowStyleKey}">
+    <Grid>
+        <TextBlock Width="350" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,-180,0,0" Height="50" Style="{StaticResource TextBlockStyle}" FontWeight="Bold" FontSize="30"  Text="Instructions for the Quiz"></TextBlock>
+        <TextBlock Width="428" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="{Binding InstructionText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBlockStyle}" VerticalAlignment="Center" Height="100"></TextBlock>
+        <Button Height="30" Margin="248,200,214,31" Command="{Binding StartQuizButtonClick}" Content="Start Quiz"/>
+    </Grid>
+</Window>
